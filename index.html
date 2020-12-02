@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Coopers Models</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> 
+</head>
+<body>
+    <main id="app">
+        <div class="mainHeader">
+            <div class="topNav">
+                <div class="topLogo">
+        <img class="mainLogo" src="images/logo.png" alt="logo" >
+      </div>
+     </div>
+       
+    </div>
+        <!-- <cooper-car></cooper-car>
+        <cooper-car></cooper-car> -->
+        <section class="banner">
+            <h1 class="hidden">Mini cooper video</h1>
+            <video playsinline autoplay muted  class="bannerV">
+                <source src="./video/mini.mp4" type="video/mp4">
+            </video>
+        <div class="bottomBanner"><p class="discover">{{ anotherMessage }}</p>
+            <!-- <h1 class="header" @click="clickHeader">{{ content }}</h1></div> -->
+    </section>
+        
+
+        <!-- show the prof data in profs array -->
+         <ul>
+             <!--this is a custom vue component defined in main.js-->
+            <cooper-car @showmydata="removeCooper" v-for="cooper in coopers" :cooper="cooper" :key="cooper.id"></cooper-car>
+            <!--<li v-for="cooper in coopers">
+                  <p> {{ cooper.model }}</p>
+                <a href="" class="removeCooper" @click.prevent="removeCooper(cooper)" :class="{'cooper-button-modifier' : removeAformat}">{{cooper.img1}}</a>:href=""
+            </li>-->
+        </ul> 
+        
+    
+        <section class="bio-data" :class="{'show-bio' : showBioData}">
+            <div class="cars">
+            <h1 class="information"> {{ currentCooperData.description }} </h1>
+            <!-- <p class="information2"> {{ currentCooperData.features }} </p> -->
+        </div>
+            <div class="img-container">
+            <img :src="'images/' + currentCooperData.img3" class="info2" alt="car">
+            <img :src="'images/' + currentCooperData.img1" class="info3" alt="car">
+        </div>
+        </section>
+   
+
+
+
+    </main>
+</body>
+<script src="js/main.js" type="module"></script>
+</html>
