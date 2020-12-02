@@ -13,8 +13,9 @@ export default{
 
     template: 
     `<div class="img-template" @click="logClicked">
-        <p class="mini"> {{ cooper.model }} </p>
-        <p class="mini"> {{ cooper.price }} </p>
+        <p class="mini"> {{ cooper.model }} 
+        </p>
+         
         <img class="car" :src="'images/' + cooper.img2" alt='cooper.model + " img"'>
         
           
