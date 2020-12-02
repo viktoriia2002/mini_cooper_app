@@ -1,0 +1,15 @@
+@import "modules/_coopersection.scss";
+@import "modules/_reset.scss";
+
+.show-bio {
+    display: block !important;
+}
+
+.bio-data{
+    display:none;
+}
+main {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    }
